@@ -1,0 +1,8 @@
+1. login dulu menggunakan perintah terminal
+npm adduser
+
+2.setelah login, dengan perintah npm publish, dan nama packagenya harus unik secara global
+
+belajar-materi-npm-rafa-khadafi@1.0.0
+
+ini urlnya https://www.npmjs.com/package/belajar-materi-npm-rafa-khadafi

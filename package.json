@@ -1,0 +1,24 @@
+{
+  "name": "belajar-materi-npm-rafa-khadafi",
+  "version": "1.0.0",
+  "description": "ini adalah data pebelajaran sya mengenai materi npm",
+  "exports": {
+    ".": "./index.mjs",
+    "./write": "./write.mjs"
+  },
+  "scripts": {
+    "prestart": "node index-sebelum.mjs",
+    "start": "node index.mjs",
+    "poststart": "node index-setelah.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "depe": "node test-depen.mjs"
+  },
+  "author": "Rafa Khadafi",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "moment": "^2.30.1"
+  }
+}

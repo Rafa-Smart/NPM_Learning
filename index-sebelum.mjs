@@ -1,0 +1,1 @@
+console.log("ini sebelum program (prestart)")

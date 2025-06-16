@@ -1,0 +1,51 @@
+jadi atribut main ini adlalh entry point yang aka di load ketikakita me load node js projek atau package 
+
+
+
+nah masalahnya adalah ketika kita hanya menggunakan atribut main saja maka kita hanyak mengakses 1 file saja
+
+oleh karena itu kita bisa ganti atribut main dnegna export, dan atribut export dan uniknya atribut inikita bisa membuat alias ketika mengakses file js, jadi tidka perlu menggunakan nama filenya
+
+conothnya 
+  "exports":{
+    ".":"./index.mjs",
+    "./write":"./write.mjs"
+  },
+
+jadi disini . itu adalah nama dari projeknya, yaitu   "name": "belajar-materi-npm",
+maka berati kalo misalkan ./write itu artinya kita menjalankan belajar-materi-npm/write.mjs
+dan kalo . artinya belajar-materi-npm
+
+berati nanti ketika kita inign memanggil modulenya misal di index.mjs, maka kita gunakan
+import {tulisFile} from "belajar-materi-npm/write"
+
+jadi ga perlu lagi pake filenya yaitu ./write
+jadi kalo misalakn suatu saat kamu ubah isi dari foldernya maka takurnya nanti ada yang berubah, makanya kita bisa lansung saja panggil berdasarkan modulenya
+
+nah tpai kalo pake atribut main kita ga bisa pake secara default misal main : "write.js",
+maka ini gabisa, kecuali emg sudah di atur waktu di init npmmya bahwa defaultna akna menjalankan write.js
+jadi harus index.js, makanya agar bisa flexible kita bisa menggunakan export
+
+
+nah maksud dari export ini adlaah kita akan meng esport file file kita ke luar
+
+
+
+jadi misalkan kalo seperti ini  "exports":{
+    ".":"./index.mjs",
+    "./write":"./write.mjs"
+  },
+
+maka orang lain yang mengimport
+import {tulisFile} from "belajar-materi-npm"
+maka ini akan dijalankan atau akan mengimport si index.js
+
+
+tapi kalo orang lain mengimport 
+import {tulisFile} from "belajar-materi-npm/write"
+maka ini akan mengimport si write.js
+
+jadi sama kayak 
+import fs from "fs" -> berati ini defaulnya itu ".":"index.js"
+
+kalo import fs from "fs/promises" -> "./promises":"promises.js"

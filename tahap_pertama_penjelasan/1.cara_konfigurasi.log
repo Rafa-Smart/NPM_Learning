@@ -1,0 +1,11 @@
+jadi cara untuk konfigurasi sesuatu yang ada di file package.json, adalah
+bisa pke homepage, contributors, dan lain lain, coba cari saja
+
+1.
+cara menjalankan aplikasinya sama saja yaitu bisa pake node nama_file
+tapi bedanya ketika kita menggunakan node js, maka program sebelum menjalankan programnya
+maka akan di jalankan dulu atau di cek dulu konfigurasi file package.json nya, baru kemudian menjalankan aplikasinya
+jadi kalo ada package.json , maka akan dicek dulu, jika tidak ada maka langsung saja dijalankan projeknya
+
+2.
+nah secara default npm itu masih menjalankan common js, oleh karena itu kita ga bisa import, maka caranya adalah kita ubah type yang ada di package.json yaitu type : "module", atau bisa juga kita ganti extensionnya jadi .mjs

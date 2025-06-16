@@ -1,0 +1,45 @@
+jadi dalam versi itu ada3
+
+yaitu ada 3
+[major.minor.patch]
+
+major = digunakan untuk Menandakan adanya perubahan besar, seperti:
+        Kompatibilitas tidak dijaga (breaking change).
+        Fitur lama dihapus atau struktur sistem berubah drastis.
+        Biasanya pengguna harus mengubah kode mereka agar tetap bisa bekerja
+
+minor = Menandakan adanya penambahan fitur baru yang tetap kompatibel dengan versi sebelumnya.
+        Tidak merusak fungsi lama (backward compatible).
+
+patch = Menandakan adanya perbaikan bug, tanpa menambah fitur atau merubah struktur.
+        Tetap kompatibel dengan versi sebelumnya.
+
+1.
+nah nanti di package.json dibagian versi pada modulenya
+  "dependencies": {
+    "lodash": "X"
+  }
+maka ini akan selalu baru ketika ada update seluruhnya
+
+2.
+nah nanti di package.json dibagian versi pada modulenya
+  "dependencies": {
+    "lodash": "2.x"
+  } atua bisa juga
+  "dependencies": {
+    "lodash": "^2.4.2"
+  }
+maka ini yang akan selalu baru adalah si minornya dan patchnya saja, tapi majornya tidak
+
+
+3.
+nah nanti di package.json dibagian versi pada modulenya
+  "dependencies": {
+    "lodash": "2.3.x"
+  } atau bisa juga
+  "dependencies": {
+    "lodash": "~2.3.1"
+  }
+maka ini yang akan selalu baru hanya si patchnya saja, tapi minor dan majornya tidak
+
+atau kalo misalkan anda mau tulis versinya dan tidak mau berubah sampai kapanpun, maka kamu harus menulisnya lengkap versinya

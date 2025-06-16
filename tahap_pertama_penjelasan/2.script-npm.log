@@ -1,0 +1,34 @@
+jadi di npm itu terdapat fitur script yaitu yang berfungsi untuk menyediakan perintah script yng nanti nya perintah script ini bsia digunakan untuk menjalankan perintah lain yang leih komplex, atau simplenya ini itu mmebuat alias untuk exsekusi program
+
+dan untuk menambahkan script, kita bisa menambahkannya di package.json
+
+jadi di scripts {
+    "run": "node indes.mjs",
+}
+
+jadi ada beberapa script yang istimewa atua sudah ad adari sananya 
+
+ada 2 cara :
+1.
+tpai kalo kita membuat script sendiri maka bisa kita run menggunakan npm run-script nama_script
+
+2.
+menjalankan script spesial
+contohnya start, stop, test, restart, uninstall, version, dll
+itu dengan cara npm namascriptnya
+
+
+jdai kita bis buat ini 
+   "stop":"node index.mjs",,
+   nah nanti ketika kita jalankan npm stop, maka akan menjalankan node index.js
+
+
+dan juga ketika kia menggunakan spesial script maka kita bisa menggunakan pre(sebelum) dan juga post(setelah),
+jadi ketika misal kita jalankan npm start, maka otomatis akan dijalankan juga prestart, dam juga poststart
+
+jadi
+  "scripts": {
+    "prestart": "node index-sebelum.js",
+    "start":"node index.mjs",
+    "poststart": "node index-setelah.js",
+  },

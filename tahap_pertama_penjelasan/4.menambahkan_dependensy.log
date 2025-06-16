@@ -1,0 +1,19 @@
+jadi salah satu fitur dari npm itu adlaah dependency management, jadi kita bisa download library secara otomatis menggunakan npm install.
+
+dengan cara npm install nama_package @versinya
+
+https://chatgpt.com/c/684bf7e2-f79c-8009-8fa3-fff7fceecf18
+
+jadi perlu diketahui ketika kita membuat projek npm itu maksudnya adlah kita ingin agar modul kita ini bisa di pakai orang lain
+
+nah ada 2 dependency yaitu production dependency dan development dependency (misalnya jest/unit testing), jadi
+
+untuk menambahkan dev dependency, ketika install mak ketikan
+npm install jest --save-dev, maka nanti akna dimasukan ke bagian devDependencies di package.json
+
+
+
+nah apa bedanya dengna dependencies production dengan dev?
+bedanya adalah ketika nanti di production kan akan di install ulang tuh si package packagenya, nah kamu ketik dengan perintah
+
+npm install --production, nah nanti node jsnya akan membaca dari si package.jsonnya mana yang tidak termasuk pada devDependencies, nah itu yang akan hanya di download
